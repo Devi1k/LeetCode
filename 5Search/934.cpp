@@ -30,7 +30,7 @@ public:
             ++level;
             int n_points = points.size();
             while (n_points--) {
-                auto [r,c] = points.front();
+                auto[r, c] = points.front();
                 points.pop();
                 for (int i = 0; i < 4; ++i) {
                     x = r + direction[i], y = c + direction[i + 1];
@@ -62,6 +62,16 @@ public:
     }
 };
 
-int main(){
-
+int main() {
+    vector<vector<int>> A = {
+            {1, 1, 1, 1, 1},
+            {1, 0, 0, 0, 1},
+            {1, 0, 1, 0, 1},
+            {1, 0, 0, 0, 1},
+            {1, 1, 1, 1, 1}
+    };
+    Solution solution;
+    int ans = solution.shortestBridge(A);
+    cout << ans << endl;
+    return 0;
 }
