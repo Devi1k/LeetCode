@@ -103,14 +103,44 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_LeetCode: phony || CMakeFiles/LeetCode.dir
 
-build CMakeFiles/LeetCode.dir/11DataStructure/240.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/11DataStructure/240.cpp || cmake_object_order_depends_target_LeetCode
-  DEP_FILE = CMakeFiles/LeetCode.dir/11DataStructure/240.cpp.o.d
+build CMakeFiles/LeetCode.dir/11DataStructure/232.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/11DataStructure/232.cpp || cmake_object_order_depends_target_LeetCode
+  DEP_FILE = CMakeFiles/LeetCode.dir/11DataStructure/232.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++17
   OBJECT_DIR = CMakeFiles/LeetCode.dir
   OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/11DataStructure
 
-build CMakeFiles/LeetCode.dir/11DataStructure/769.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/11DataStructure/769.cpp || cmake_object_order_depends_target_LeetCode
-  DEP_FILE = CMakeFiles/LeetCode.dir/11DataStructure/769.cpp.o.d
+build CMakeFiles/LeetCode.dir/5Search/130.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/5Search/130.cpp || cmake_object_order_depends_target_LeetCode
+  DEP_FILE = CMakeFiles/LeetCode.dir/5Search/130.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++17
+  OBJECT_DIR = CMakeFiles/LeetCode.dir
+  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/5Search
+
+build CMakeFiles/LeetCode.dir/5Search/257.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/5Search/257.cpp || cmake_object_order_depends_target_LeetCode
+  DEP_FILE = CMakeFiles/LeetCode.dir/5Search/257.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++17
+  OBJECT_DIR = CMakeFiles/LeetCode.dir
+  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/5Search
+
+build CMakeFiles/LeetCode.dir/5Search/47.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/5Search/47.cpp || cmake_object_order_depends_target_LeetCode
+  DEP_FILE = CMakeFiles/LeetCode.dir/5Search/47.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++17
+  OBJECT_DIR = CMakeFiles/LeetCode.dir
+  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/5Search
+
+build CMakeFiles/LeetCode.dir/5Search/40.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/5Search/40.cpp || cmake_object_order_depends_target_LeetCode
+  DEP_FILE = CMakeFiles/LeetCode.dir/5Search/40.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++17
+  OBJECT_DIR = CMakeFiles/LeetCode.dir
+  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/5Search
+
+build CMakeFiles/LeetCode.dir/11DataStructure/20.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/11DataStructure/20.cpp || cmake_object_order_depends_target_LeetCode
+  DEP_FILE = CMakeFiles/LeetCode.dir/11DataStructure/20.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++17
+  OBJECT_DIR = CMakeFiles/LeetCode.dir
+  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/11DataStructure
+
+build CMakeFiles/LeetCode.dir/11DataStructure/155.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/11DataStructure/155.cpp || cmake_object_order_depends_target_LeetCode
+  DEP_FILE = CMakeFiles/LeetCode.dir/11DataStructure/155.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++17
   OBJECT_DIR = CMakeFiles/LeetCode.dir
   OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/11DataStructure
@@ -123,7 +153,7 @@ build CMakeFiles/LeetCode.dir/11DataStructure/769.cpp.o: CXX_COMPILER__LeetCode_
 #############################################
 # Link the executable LeetCode
 
-build LeetCode: CXX_EXECUTABLE_LINKER__LeetCode_Debug CMakeFiles/LeetCode.dir/11DataStructure/240.cpp.o CMakeFiles/LeetCode.dir/11DataStructure/769.cpp.o
+build LeetCode: CXX_EXECUTABLE_LINKER__LeetCode_Debug CMakeFiles/LeetCode.dir/11DataStructure/232.cpp.o CMakeFiles/LeetCode.dir/5Search/130.cpp.o CMakeFiles/LeetCode.dir/5Search/257.cpp.o CMakeFiles/LeetCode.dir/5Search/47.cpp.o CMakeFiles/LeetCode.dir/5Search/40.cpp.o CMakeFiles/LeetCode.dir/11DataStructure/20.cpp.o CMakeFiles/LeetCode.dir/11DataStructure/155.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
   OBJECT_DIR = CMakeFiles/LeetCode.dir
   POST_BUILD = :
