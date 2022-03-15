@@ -18,6 +18,8 @@
 #include <unordered_set>
 #include <unordered_map>
 
-#define rep(i, n) for(int i = 0; i < (n); ++i)
-#define chk(i)    cout << "check(" << i << ")" << endl;
 using namespace std;
+
+void show(int x) {
+    cout << x << " ";
+}

@@ -21,9 +21,6 @@ public:
     }
 };
 
-void show(int x) {
-    cout << x << " ";
-}
 
 int main() {
     vector<int> nums = {4, 3, 2, 7, 8, 2, 3, 1};
