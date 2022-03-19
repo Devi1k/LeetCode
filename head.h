@@ -18,9 +18,16 @@
 #include <queue>
 #include <unordered_set>
 #include <unordered_map>
+#include <set>
+#include <numeric>
 
 using namespace std;
 
-void show(int x) {
+void show_num(int x) {
     cout << x << " ";
 }
+
+void show_string(string x) {
+    cout << x << " ";
+}
+
