@@ -1,5 +1,4 @@
 "/Users/starry/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/starry/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/CLion.app/Contents/bin/ninja/mac/ninja" -G Ninja /Users/starry/Documents/Code/LeetCode
 -- Configuring done
-CMake Error: CMake can not determine linker language for target: LeetCode
 -- Generating done
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Build files have been written to: /Users/starry/Documents/Code/LeetCode/cmake-build-debug
