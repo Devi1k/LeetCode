@@ -20,7 +20,7 @@ public:
     Solution(ListNode *head) : head(head) {
 
     }
-
+    // 水库采样
     int getRandom() {
         int ans = head->val;
         ListNode *node = head->next;
