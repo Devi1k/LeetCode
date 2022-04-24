@@ -16,14 +16,14 @@ public:
             node = node->next;
         }
         ListNode *dummyHead = new ListNode(0, head);
-        for (int subLength = 1; subLength < length; ++subLength) {
+        for (int subLength = 1; subLength < length; subLength <<= 1) {
             ListNode *prev = dummyHead, *curr = dummyHead->next;
             while (curr) {
                 ListNode *head1 = curr;
                 for (int i = 1; i < subLength && curr->next; ++i) {
                     curr = curr->next;
                 }
-                ListNode *head2 = curr;
+                ListNode *head2 = curr->next;
                 curr->next = nullptr;
                 curr = head2;
                 for (int i = 1; i < subLength && curr && curr->next; ++i) {
