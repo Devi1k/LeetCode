@@ -23,25 +23,6 @@ public:
             st.pop();
             res.emplace_back(node->val);
             if (node->left)
-                st.push(root->left);
-            if (node->right)
-                st.push(root->right);
-        }
-        reverse(res.begin(), res.end());
-        return res;
-    }
-
-    vector<int> postorderTraversal(TreeNode *root) {
-        vector<int> res;
-        if (!root)
-            return res;
-        stack<TreeNode *> st;
-        st.push(root);
-        while (!st.empty()) {
-            TreeNode *node = st.top();
-            st.pop();
-            res.emplace_back(node->val);
-            if (node->left)
                 st.push(node->left); // 相对于前序遍历，这更改一下入栈顺序 （空节点不入栈）
             if (node->right)
                 st.push(node->right); // 空节点不入栈
