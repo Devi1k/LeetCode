@@ -6,8 +6,7 @@
 class Solution {
 public:
     pair<ListNode *, ListNode *> reverse(ListNode *head, ListNode *tail) {
-        ListNode *prev = tail->next;
-        ListNode *p = head;
+        ListNode *prev = tail->next, *p = head;
         while (prev != tail) {
             ListNode *next = p->next;
             p->next = prev;
@@ -18,15 +17,15 @@ public:
     }
 
     ListNode *reverseKGroup(ListNode *head, int k) {
-        ListNode *dummy = new ListNode();
-        dummy->next = head;
+        ListNode *dummy = new ListNode(0, head);
         ListNode *prev = dummy;
         while (head) {
-            ListNode *tail = prev;
-            for (int i = 0; i < k; ++i) {
+            ListNode *tail = head;
+            for (int i = 0; i < k; i++) {
                 tail = tail->next;
-                if (!tail)
+                if (!tail) {
                     return dummy->next;
+                }
             }
             ListNode *next = tail->next;
             tie(head, tail) = reverse(head, tail);

@@ -16,18 +16,18 @@ struct ListNode {
 
 class Solution {
 public:
-//    ListNode *reverseList(ListNode *head) {
-//        ListNode *next, *prev;
-//        prev = nullptr;
-//        while (head) {
-//            next = head->next;
-//            head->next = prev;
-//            prev = head;
-//            head = next;
-//        }
-//        return next;
-//
-//    }
+    ListNode *reverseList(ListNode *head) {
+        ListNode *next, *prev;
+        prev = nullptr;
+        while (head) {
+            next = head->next;
+            head->next = prev;
+            prev = head;
+            head = next;
+        }
+        return next;
+
+    }
 
     ListNode *reverseList(ListNode *head, ListNode *prev = nullptr) {
         if (!head)

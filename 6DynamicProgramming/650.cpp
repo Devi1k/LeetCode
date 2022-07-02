@@ -1,7 +1,8 @@
-//
-// Created by 倪泽溥 on 2022/4/8.
-//
-#include "../head.h"
+#include <iostream>
+#include <vector>
+#include <math.h>
+
+using namespace std;
 
 class Solution {
 public:
@@ -15,30 +16,17 @@ public:
                     dp[i] = dp[j] + dp[i / j];
                     break;
                 }
+
             }
+
         }
         return dp[n];
     }
-
-
-//    int minSteps(int n) {
-//        vector<int> f(n + 1);
-//        for (int i = 2; i <= n; ++i) {
-//            f[i] = INT_MAX;
-//            for (int j = 1; j * j <= i; ++j) {
-//                if (i % j == 0) {
-//                    f[i] = min(f[i], f[j] + i / j);
-//                    f[i] = min(f[i], f[i / j] + j);
-//                }
-//            }
-//        }
-//        return f[n];
-//    }
-
-
 };
 
 int main() {
+    int k;
+    cin >> k;
     Solution solution;
-    cout << solution.minSteps(8);
+    cout << solution.minSteps(k);
 }

@@ -90,10 +90,10 @@ TreeNode *buildTree(vector<int> &inorder, vector<int> &postorder) {
 
 int main() {
     Solution solution;
-    vector<int> rootInorder = {1, 4, 2, 3, 5};
-    vector<int> rootPostorder = {1, 2, 4, 5, 3};
-    vector<int> subRootInorder = {1, 4, 2};
-    vector<int> subRootPostorder = {1, 2, 4};
+    vector<int> rootInorder = {8, 12, 3, 10, 11, 6};
+    vector<int> rootPostorder = {8, 3, 12, 11, 6, 10};
+    vector<int> subRootInorder = {8, 12, 10, 6};
+    vector<int> subRootPostorder = {8, 12, 6, 10};
     TreeNode *root = buildTree(rootInorder, rootPostorder);
     TreeNode *subRoot = buildTree(subRootInorder, subRootPostorder);
 
