@@ -1,4 +1,4 @@
-"/Users/starry/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/starry/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/CLion.app/Contents/bin/ninja/mac/ninja" -G Ninja /Users/starry/Documents/Code/LeetCode
+"/Users/starry/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5787.29/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/starry/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/221.5787.29/CLion.app/Contents/bin/ninja/mac/ninja" -G Ninja -S /Users/starry/Documents/Code/LeetCode -B /Users/starry/Documents/Code/LeetCode/cmake-build-debug
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/starry/Documents/Code/LeetCode/cmake-build-debug
