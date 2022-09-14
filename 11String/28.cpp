@@ -29,6 +29,6 @@ public:
 
 int main() {
     Solution solution;
-    cout << solution.strStr("hello", "ll");
+    cout << solution.strStr("aabaabaaf", "aabaaf");
 }
 
