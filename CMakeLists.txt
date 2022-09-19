@@ -3,5 +3,4 @@ project(LeetCode)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(LeetCode head.h 12LinkList/82.cpp)
-add_executable(main main.cpp)
+add_executable(LeetCode head.h 5Search/46.cpp)
