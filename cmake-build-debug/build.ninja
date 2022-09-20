@@ -49,35 +49,11 @@ cmake_ninja_workdir = /Users/starry/Documents/Code/LeetCode/cmake-build-debug/
 
 build cmake_object_order_depends_target_LeetCode: phony || CMakeFiles/LeetCode.dir
 
-build CMakeFiles/LeetCode.dir/10DataStructure/1.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/10DataStructure/1.cpp || cmake_object_order_depends_target_LeetCode
-  DEP_FILE = CMakeFiles/LeetCode.dir/10DataStructure/1.cpp.o.d
+build CMakeFiles/LeetCode.dir/11String/5.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/11String/5.cpp || cmake_object_order_depends_target_LeetCode
+  DEP_FILE = CMakeFiles/LeetCode.dir/11String/5.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
   OBJECT_DIR = CMakeFiles/LeetCode.dir
-  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/10DataStructure
-
-build CMakeFiles/LeetCode.dir/10DataStructure/349.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/10DataStructure/349.cpp || cmake_object_order_depends_target_LeetCode
-  DEP_FILE = CMakeFiles/LeetCode.dir/10DataStructure/349.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
-  OBJECT_DIR = CMakeFiles/LeetCode.dir
-  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/10DataStructure
-
-build CMakeFiles/LeetCode.dir/10DataStructure/202.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/10DataStructure/202.cpp || cmake_object_order_depends_target_LeetCode
-  DEP_FILE = CMakeFiles/LeetCode.dir/10DataStructure/202.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
-  OBJECT_DIR = CMakeFiles/LeetCode.dir
-  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/10DataStructure
-
-build CMakeFiles/LeetCode.dir/10DataStructure/151.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/10DataStructure/151.cpp || cmake_object_order_depends_target_LeetCode
-  DEP_FILE = CMakeFiles/LeetCode.dir/10DataStructure/151.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
-  OBJECT_DIR = CMakeFiles/LeetCode.dir
-  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/10DataStructure
-
-build CMakeFiles/LeetCode.dir/10DataStructure/Sword58.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/10DataStructure/Sword58.cpp || cmake_object_order_depends_target_LeetCode
-  DEP_FILE = CMakeFiles/LeetCode.dir/10DataStructure/Sword58.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
-  OBJECT_DIR = CMakeFiles/LeetCode.dir
-  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/10DataStructure
+  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/11String
 
 
 # =============================================================================
@@ -87,44 +63,13 @@ build CMakeFiles/LeetCode.dir/10DataStructure/Sword58.cpp.o: CXX_COMPILER__LeetC
 #############################################
 # Link the executable LeetCode
 
-build LeetCode: CXX_EXECUTABLE_LINKER__LeetCode_Debug CMakeFiles/LeetCode.dir/10DataStructure/1.cpp.o CMakeFiles/LeetCode.dir/10DataStructure/349.cpp.o CMakeFiles/LeetCode.dir/10DataStructure/202.cpp.o CMakeFiles/LeetCode.dir/10DataStructure/151.cpp.o CMakeFiles/LeetCode.dir/10DataStructure/Sword58.cpp.o
+build LeetCode: CXX_EXECUTABLE_LINKER__LeetCode_Debug CMakeFiles/LeetCode.dir/11String/5.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/LeetCode.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = LeetCode
   TARGET_PDB = LeetCode.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target main
-
-
-#############################################
-# Order-only phony target for main
-
-build cmake_object_order_depends_target_main: phony || CMakeFiles/main.dir
-
-build CMakeFiles/main.dir/WrittenExamination/main.cpp.o: CXX_COMPILER__main_Debug /Users/starry/Documents/Code/LeetCode/WrittenExamination/main.cpp || cmake_object_order_depends_target_main
-  DEP_FILE = CMakeFiles/main.dir/WrittenExamination/main.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
-  OBJECT_DIR = CMakeFiles/main.dir
-  OBJECT_FILE_DIR = CMakeFiles/main.dir/WrittenExamination
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target main
-
-
-#############################################
-# Link the executable main
-
-build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/WrittenExamination/main.cpp.o
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
-  OBJECT_DIR = CMakeFiles/main.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = main
-  TARGET_PDB = main.dbg
 
 
 #############################################
@@ -160,7 +105,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/starry/Documents/Code/LeetCode/cmake-build-debug
 
-build all: phony LeetCode main
+build all: phony LeetCode
 
 # =============================================================================
 # Built-in targets
