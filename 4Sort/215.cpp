@@ -9,37 +9,32 @@ using namespace std;
 
 class Solution {
 public:
-    int quickSelect(vector<int> &a, int l, int r, int index) {
-        int q = randomPartition(a, l, r);
-        if (q == index) {
-            return a[q];
-        } else {
-            return q < index ? quickSelect(a, q + 1, r, index) : quickSelect(a, l, q - 1, index);
+    int quickSelect(vector<int> &nums, int l, int r, int index) {
+        int q = randomPartition(nums, l, r);
+        if (q == index) return nums[q];
+        else {
+            return q < index ? quickSelect(nums, q + 1, r, index) : quickSelect(nums, l, q - 1, index);
         }
     }
 
-    inline int randomPartition(vector<int> &a, int l, int r) {
-        // 随机一个索引，+l保证其在l与r之间
-        int i = rand() % (r - l + 1) + l;
-        // 把随机选择的数作为标志对比
-        swap(a[i], a[r]);
-        return partition(a, l, r);
+
+    int randomPartition(vector<int> &nums, int l, int r) {
+        int x = rand() % (r - l + 1) + l;
+        swap(nums[x], nums[r]);
+        return partition(nums, l, r);
     }
 
-    inline int partition(vector<int> &a, int l, int r) {
-        // 快速排序，如果小于标志
-        int x = a[r], i = l - 1;
-        for (int j = l; j < r; ++j) {
-            if (a[j] <= x) {
-                swap(a[++i], a[j]);
-            }
+    int partition(vector<int> &nums, int l, int r) {
+        int x = nums[r], i = l - 1;
+        for (int j = 0; j < r; ++j) {
+            if (nums[j] <= x)
+                swap(nums[j], nums[++i]);
         }
-        swap(a[i + 1], a[r]);
+        swap(nums[i + 1], nums[r]);
         return i + 1;
     }
 
     int findKthLargest(vector<int> &nums, int k) {
-//        srand(time(0));
         return quickSelect(nums, 0, nums.size() - 1, nums.size() - k);
     }
 };
