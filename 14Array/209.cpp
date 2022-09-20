@@ -8,17 +8,21 @@ using namespace std;
 
 class Solution {
 public:
-    int minSubArrayLen(vector<int> &nums, int k) {
-        int result = INT32_MAX, start = 0, sum = 0;
-        for (int end = 0; end < nums.size(); ++end) {
+    int minSubArrayLen(vector<int> &nums, int target) {
+        int n = nums.size();
+        if (n < 1 || n == 1 && nums[0] != target) return 0;
+        int start = 0, end = 0, ans = INT32_MAX;
+        int sum = 0;
+        while (end < n) {
             sum += nums[end];
-            while (sum >= k) {
-                int subLength = end - start + 1;
-                result = result > subLength ? subLength : result;
-                sum -= nums[start++];
+            while (sum >= target) {
+                ans = min(ans, end - start + 1);
+                sum -= nums[start];
+                ++start;
             }
+            ++end;
         }
-        return result == INT32_MAX ? 0 : result;
+        return ans == INT32_MAX ? 0 : ans;
     }
 };
 
