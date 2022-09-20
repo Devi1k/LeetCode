@@ -2,15 +2,19 @@
 // Created by 倪泽溥 on 2022/4/9.
 //
 
-# include "../head.h"
+#include "vector"
+#include "iostream"
+
+using namespace std;
 
 class Solution {
 public:
     int maxProfit(vector<int> &prices) {
         int sell = 0, buy = INT_MIN;
-        for (int price: prices) {
-            buy = max(buy, -price);
-            sell = max(sell, buy + price);
+        for (auto p: prices) {
+            buy = max(buy, -p);
+            sell = max(sell, buy + p);
+
         }
         return sell;
     }
