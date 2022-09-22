@@ -85,12 +85,12 @@ void selection_sort(vector<int> &nums, int n) {
 
 
 int main() {
-    vector<int> nums = {1, 3, 5, 7, 2, 6, 4, 8, 9, 2};
+    vector<int> nums = {3, 5, 7, 2, 1, 6, 4, 8, 9};
     int n = nums.size();
     vector<int> temp(n);
 //    4Sort(nums.begin(), nums.end());
-//    quick_sort(nums, 0, n);
-    merge_sort(nums, 0, n, temp);
+    quick_sort(nums, 0, n);
+//    merge_sort(nums, 0, n, temp);
 //    insert_sort(nums, n);
 //    bubble_sort(nums, n);
 //    selection_sort(nums, n);
