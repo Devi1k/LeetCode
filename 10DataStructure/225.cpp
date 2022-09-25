@@ -4,40 +4,61 @@
 #include "../head.h"
 
 class MyStack {
-    queue<int> res;
+    queue<int> q1, q2;
 public:
     MyStack() {
 
     }
 
     void push(int x) {
-        int n = res.size();
-        res.push(x);
-        for (int i = 0; i < n; ++i) {
-            res.push(res.front());
-            res.pop();
-        }
+        q1.push(x);
     }
 
     int pop() {
-        int x = res.front();
-        res.pop();
-        return x;
+        int size = q1.size(), res;
+        while (--size) {
+            q2.push(q1.front());
+            q1.pop();
+        }
+        res = q1.front();
+        q1.pop();
+        while (!q2.empty()) {
+            q1.push(q2.front());
+            q2.pop();
+        }
+        return res;
     }
+
 
     int top() {
-        return res.front();
+        int size = q1.size(), res;
+        while (--size) {
+            q2.push(q1.front());
+            q1.pop();
+        }
+        res = q1.front();
+        q2.push(res);
+        q1.pop();
+        while (!q2.empty()) {
+            q1.push(q2.front());
+            q2.pop();
+        }
+        return res;
     }
 
+
     bool empty() {
-        return res.empty();
+        return q1.empty() && q2.empty();
     }
+
 };
 
 int main() {
     MyStack *obj = new MyStack();
-    obj->push(x);
-    int param_2 = obj->pop();
+    obj->push(1);
+    obj->push(2);
     int param_3 = obj->top();
+    int param_2 = obj->pop();
     bool param_4 = obj->empty();
+    cout << param_4;
 }

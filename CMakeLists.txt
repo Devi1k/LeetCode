@@ -3,4 +3,5 @@ project(LeetCode)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(LeetCode head.h 10DataStructure/239.cpp)
+add_executable(exam head.h WrittenExamination/main.cpp)
+add_executable(LeetCode head.h 10DataStructure/1047.cpp)
