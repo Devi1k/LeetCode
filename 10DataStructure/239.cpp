@@ -1,13 +1,17 @@
 //
 // Created by 倪泽溥 on 2022/3/15.
 //
-# include "../head.h"
+#include "deque"
+#include "vector"
+#include "iostream"
+
+using namespace std;
 
 class Solution {
 public:
     vector<int> maxSlidingWindow(vector<int> &nums, int k) {
         deque<int> dq;
-        vector<int> ans;
+        vector<int> res;
         for (int i = 0; i < nums.size(); ++i) {
             if (!dq.empty() && dq.front() == i - k) {
                 dq.pop_front();
@@ -17,10 +21,10 @@ public:
             }
             dq.push_back(i);
             if (i >= k - 1) {
-                ans.push_back(nums[dq.front()]);
+                res.push_back(nums[dq.front()]);
             }
         }
-        return ans;
+        return res;
     }
 };
 
@@ -29,5 +33,7 @@ int main() {
     int k = 3;
     Solution solution;
     vector<int> res = solution.maxSlidingWindow(nums, k);
-    for_each(res.begin(), res.end(), show);
+    for (auto r: res) {
+        cout << r << " ";
+    }
 }

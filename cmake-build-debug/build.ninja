@@ -49,11 +49,11 @@ cmake_ninja_workdir = /Users/starry/Documents/Code/LeetCode/cmake-build-debug/
 
 build cmake_object_order_depends_target_LeetCode: phony || CMakeFiles/LeetCode.dir
 
-build CMakeFiles/LeetCode.dir/11String/5.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/11String/5.cpp || cmake_object_order_depends_target_LeetCode
-  DEP_FILE = CMakeFiles/LeetCode.dir/11String/5.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+build CMakeFiles/LeetCode.dir/10DataStructure/239.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/10DataStructure/239.cpp || cmake_object_order_depends_target_LeetCode
+  DEP_FILE = CMakeFiles/LeetCode.dir/10DataStructure/239.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/LeetCode.dir
-  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/11String
+  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/10DataStructure
 
 
 # =============================================================================
@@ -63,7 +63,7 @@ build CMakeFiles/LeetCode.dir/11String/5.cpp.o: CXX_COMPILER__LeetCode_Debug /Us
 #############################################
 # Link the executable LeetCode
 
-build LeetCode: CXX_EXECUTABLE_LINKER__LeetCode_Debug CMakeFiles/LeetCode.dir/11String/5.cpp.o
+build LeetCode: CXX_EXECUTABLE_LINKER__LeetCode_Debug CMakeFiles/LeetCode.dir/10DataStructure/239.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/LeetCode.dir
   POST_BUILD = :
