@@ -1,31 +1,63 @@
 //
 // Created by 倪泽溥 on 2022/3/1.
 //
-#include "../head.h"
+#include "unordered_map"
+#include "vector"
+#include "queue"
+#include "iostream"
+
+using namespace std;
 
 class Solution {
 public:
+    class my_comparison {
+    public:
+        bool operator()(const pair<int, int> &lhs, pair<int, int> &rhs) {
+            return lhs.second > rhs.second;
+        }
+    };
+
+//    vector<int> topKFrequent(vector<int> &nums, int k) {
+//        unordered_map<int, int> hash;
+//        vector<int> res(k);
+//        for (auto &n: nums) {
+//            ++hash[n];
+//        }
+//        priority_queue<pair<int, int>, vector<pair<int, int>>, my_comparison> pri_que;
+//        for (unordered_map<int, int>::iterator it = hash.begin(); it != hash.end(); it++) {
+//            pri_que.push(*it);
+//            if (pri_que.size() > k) {
+//                pri_que.pop();
+//            }
+//        }
+//        for (int i = k - 1; i >= 0; --i) {
+//            res[i] = pri_que.top().first;
+//            pri_que.pop();
+//        }
+//        return res;
+//    }
     vector<int> topKFrequent(vector<int> &nums, int k) {
-        unordered_map<int, int> counts;
+        unordered_map<int, int> map;
         int max_count = 0;
-        for (const int &num: nums) {
-            max_count = max(max_count, ++counts[num]);
+        for (auto &n: nums) {
+            max_count = max(max_count, ++map[n]);
         }
-        // budget本身的下标就是频率，所以budget的空间是cnt
-        //     方便统计，保证下标统一，所以是cnt+1
-        vector<vector<int>> buckets(max_count + 1);
-        for (const auto &p: counts) {
-            buckets[p.second].push_back(p.first);
+        vector<vector<int>> count(max_count + 1);
+        for (auto &p: map) {
+            count[p.second].push_back(p.first);
         }
-        vector<int> ans;
-        for (int i = max_count; i >= 0 && ans.size() < k; --i) {
-            for (const int &num: buckets[i]) {
-                ans.push_back(num);
-                if (ans.size() == k)
-                    break;
+        vector<int> res;
+        for (int i = count.size() - 1; i >= 0; --i) {
+            if (count[i].empty())
+                continue;
+            for (auto &c: count[i]) {
+                res.push_back(c);
+            }
+            if (res.size() == k) {
+                break;
             }
         }
-        return ans;
+        return res;
     }
 };
 
@@ -35,7 +67,7 @@ int main() {
     vector<int> nums = {1, 1, 1, 1, 2, 2, 3, 4};
     int k = 2;
     vector<int> ans = solution.topKFrequent(nums, k);
-    rep(i, ans.size()) cout << ans[i] << " ";
+
     cout << endl;
     return 0;
 }
