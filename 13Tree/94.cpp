@@ -1,7 +1,18 @@
 //
 // Created by 倪泽溥 on 2022/4/29.
 //
-#include "../head.h"
+#include "stack"
+#include "vector"
+
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+
+    TreeNode(int v) : val(v), left(nullptr), right(nullptr) {}
+};
 
 class Solution {
 public:
@@ -15,10 +26,9 @@ public:
 
 
     vector<int> inorderTraversal(TreeNode *root) {
-        vector<int> res;
-        if (!root)
-            return res;
         stack<TreeNode *> st;
+        vector<int> res;
+        if (!root) return res;
         TreeNode *cur = root;
         while (!st.empty() || cur) {
             if (cur) {
@@ -27,7 +37,7 @@ public:
             } else {
                 cur = st.top();
                 st.pop();
-                res.emplace_back(cur->val);
+                res.push_back(cur->val);
                 cur = cur->right;
             }
         }
