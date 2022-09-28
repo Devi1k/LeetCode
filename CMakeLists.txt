@@ -4,4 +4,4 @@ project(LeetCode)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(exam head.h WrittenExamination/main.cpp)
-add_executable(LeetCode head.h 13Tree/144.cpp)
+add_executable(LeetCode head.h 13Tree/144.cpp 13Tree/102.cpp)
