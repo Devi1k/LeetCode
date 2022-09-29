@@ -6,6 +6,11 @@
 class Solution {
 public:
     int maxDepth(TreeNode *root) {
-        return root != nullptr ? 1 + max(maxDepth(root->left), maxDepth(root->right)) : 0;
+        if (!root) return 0;
+        int left = maxDepth(root->left);
+        int right = maxDepth(root->right);
+        int depth = max(left, right) + 1;
+        return depth;
+//        return root == nullptr ? 0 : 1 + max(maxDepth(root->left), maxDepth(root->right));
     }
 };
