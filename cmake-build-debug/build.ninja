@@ -41,6 +41,37 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/starry/Documents/Code/LeetCode/cmake-build-debug/
 # =============================================================================
+# Object build statements for EXECUTABLE target exam
+
+
+#############################################
+# Order-only phony target for exam
+
+build cmake_object_order_depends_target_exam: phony || CMakeFiles/exam.dir
+
+build CMakeFiles/exam.dir/WrittenExamination/main.cpp.o: CXX_COMPILER__exam_Debug /Users/starry/Documents/Code/LeetCode/WrittenExamination/main.cpp || cmake_object_order_depends_target_exam
+  DEP_FILE = CMakeFiles/exam.dir/WrittenExamination/main.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/exam.dir
+  OBJECT_FILE_DIR = CMakeFiles/exam.dir/WrittenExamination
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target exam
+
+
+#############################################
+# Link the executable exam
+
+build exam: CXX_EXECUTABLE_LINKER__exam_Debug CMakeFiles/exam.dir/WrittenExamination/main.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  OBJECT_DIR = CMakeFiles/exam.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = exam
+  TARGET_PDB = exam.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target LeetCode
 
 
@@ -49,11 +80,17 @@ cmake_ninja_workdir = /Users/starry/Documents/Code/LeetCode/cmake-build-debug/
 
 build cmake_object_order_depends_target_LeetCode: phony || CMakeFiles/LeetCode.dir
 
-build CMakeFiles/LeetCode.dir/10DataStructure/239.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/10DataStructure/239.cpp || cmake_object_order_depends_target_LeetCode
-  DEP_FILE = CMakeFiles/LeetCode.dir/10DataStructure/239.cpp.o.d
+build CMakeFiles/LeetCode.dir/13Tree/144.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/13Tree/144.cpp || cmake_object_order_depends_target_LeetCode
+  DEP_FILE = CMakeFiles/LeetCode.dir/13Tree/144.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/LeetCode.dir
-  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/10DataStructure
+  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/13Tree
+
+build CMakeFiles/LeetCode.dir/13Tree/102.cpp.o: CXX_COMPILER__LeetCode_Debug /Users/starry/Documents/Code/LeetCode/13Tree/102.cpp || cmake_object_order_depends_target_LeetCode
+  DEP_FILE = CMakeFiles/LeetCode.dir/13Tree/102.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/LeetCode.dir
+  OBJECT_FILE_DIR = CMakeFiles/LeetCode.dir/13Tree
 
 
 # =============================================================================
@@ -63,7 +100,7 @@ build CMakeFiles/LeetCode.dir/10DataStructure/239.cpp.o: CXX_COMPILER__LeetCode_
 #############################################
 # Link the executable LeetCode
 
-build LeetCode: CXX_EXECUTABLE_LINKER__LeetCode_Debug CMakeFiles/LeetCode.dir/10DataStructure/239.cpp.o
+build LeetCode: CXX_EXECUTABLE_LINKER__LeetCode_Debug CMakeFiles/LeetCode.dir/13Tree/144.cpp.o CMakeFiles/LeetCode.dir/13Tree/102.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/LeetCode.dir
   POST_BUILD = :
@@ -105,7 +142,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/starry/Documents/Code/LeetCode/cmake-build-debug
 
-build all: phony LeetCode
+build all: phony exam LeetCode
 
 # =============================================================================
 # Built-in targets
