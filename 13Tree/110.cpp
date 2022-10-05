@@ -1,20 +1,31 @@
 //
 // Created by 倪泽溥 on 2022/4/24.
 //
-#include "../head.h"
+#include "algorithm"
+
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+
+    TreeNode(int v) : val(v), left(nullptr), right(nullptr) {}
+};
 
 class Solution {
 public:
     bool isBalanced(TreeNode *root) {
-        return depth(root) != -1;
+        return getDepth(root) != -1;
     }
 
-    int depth(TreeNode *root) {
-        if (!root)
+    int getDepth(TreeNode *root) {
+        if (!root) return 0;
+        int left = getDepth(root->left), right = getDepth(root->right);
+        if (left == -1 || right == -1 || abs(left - right) > 1) {
             return -1;
-        int left = depth(root->left), right = depth(root->right);
-        if (left == -1 || right == -1 || abs(right - left) > 1)
-            return -1;
-        return 1 + max(left, right);
+        } else {
+            return 1 + max(left, right);
+        }
     }
 };
