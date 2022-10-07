@@ -55,6 +55,12 @@ build CMakeFiles/exam.dir/WrittenExamination/main.cpp.o: CXX_COMPILER__exam_Debu
   OBJECT_DIR = CMakeFiles/exam.dir
   OBJECT_FILE_DIR = CMakeFiles/exam.dir/WrittenExamination
 
+build CMakeFiles/exam.dir/1Greedy/53.cpp.o: CXX_COMPILER__exam_Debug /Users/starry/Documents/Code/LeetCode/1Greedy/53.cpp || cmake_object_order_depends_target_exam
+  DEP_FILE = CMakeFiles/exam.dir/1Greedy/53.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/exam.dir
+  OBJECT_FILE_DIR = CMakeFiles/exam.dir/1Greedy
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target exam
@@ -63,7 +69,7 @@ build CMakeFiles/exam.dir/WrittenExamination/main.cpp.o: CXX_COMPILER__exam_Debu
 #############################################
 # Link the executable exam
 
-build exam: CXX_EXECUTABLE_LINKER__exam_Debug CMakeFiles/exam.dir/WrittenExamination/main.cpp.o
+build exam: CXX_EXECUTABLE_LINKER__exam_Debug CMakeFiles/exam.dir/WrittenExamination/main.cpp.o CMakeFiles/exam.dir/1Greedy/53.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/exam.dir
   POST_BUILD = :
