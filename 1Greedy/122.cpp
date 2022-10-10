@@ -10,22 +10,17 @@ using namespace std;
 class Solution {
 public:
     int maxProfit(vector<int> &prices) {
-        int ans = 0;
-        for (int i = 0; i < prices.size(); ++i) {
-            ans += max(0, prices[i + 1] - prices[i]);
+        int profit = 0;
+        for (int i = 1; i < prices.size(); ++i) {
+            profit += max(prices[i] - prices[i - 1], 0);
         }
-        return ans;
+        return profit;
     }
 };
 
-int main(){
+int main() {
     Solution solution;
-    vector<int> prices;
-    int k;
-    for (int i = 0; i < 6; ++i) {
-        cin >> k;
-        prices.push_back(k);
-    }
+    vector<int> prices = {};
     int res = solution.maxProfit(prices);
     cout << res;
 }
