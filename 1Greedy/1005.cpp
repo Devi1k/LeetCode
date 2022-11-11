@@ -38,5 +38,5 @@ public:
 int main() {
     vector<int> nums = {3, -1, 0, 2};
     Solution solution;
-    cout << solution.largestSumAfterKNegations(nums, 3);
+    cout << solution.largestSumAfterKNegations(nums, 4);
 }
