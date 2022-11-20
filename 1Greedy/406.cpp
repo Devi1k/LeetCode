@@ -6,35 +6,30 @@
 #include "iostream"
 
 using namespace std;
+
 class Solution {
 public:
-    vector<vector<int>> reconstructQueue(vector<vector<int>>& people) {
-        sort(people.begin(),people.end(),[](const vector<int> &a,const vector<int> &b){
-            return a[0] < b[0] || (a[0] == b[0] && a[1] > b[1]);
-        });
-        int n = people.size();
-        vector<vector<int>> ans(n);
-        for (const vector<int>& person: people) {
-            int spaces = person[1] + 1;
-            for (int i = 0; i < n; ++i) {
-                if (ans[i].empty()) {
-                    --spaces;
-                    if (!spaces) {
-                        ans[i] = person;
-                        break;
-                    }
-                }
-            }
+    static bool cmp(const vector<int> &a, const vector<int> &b) {
+        if (a[0] > b[0] || a[0] == b[0] && a[1] < b[1])
+            return true;
+        return false;
+    }
+
+    vector<vector<int>> reconstructQueue(vector<vector<int>> &people) {
+        sort(people.begin(), people.end(), cmp);
+        vector<vector<int>> res;
+        for (auto p: people) {
+            res.insert(res.begin() + p[1], p);
         }
-        return ans;
+        return res;
     }
 };
 
-int main(){
+int main() {
     Solution solution;
     vector<vector<int>> people;
     vector<int> N;
-    int k,m;
+    int k, m;
     for (int i = 0; i < 6; ++i) {
         cin >> k;
         cin >> m;
@@ -44,7 +39,7 @@ int main(){
         N.clear();
     }
     vector<vector<int>> res = solution.reconstructQueue(people);
-    for (const vector<int> re:res) {
+    for (const vector<int> re: res) {
         cout << re[0];
         cout << re[1] << endl;
     }

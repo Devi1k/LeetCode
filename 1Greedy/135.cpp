@@ -10,22 +10,22 @@ using namespace std;
 
 class Solution {
 public:
-    int candy(vector<int>& ratings) {
+    int candy(vector<int> &ratings) {
+
         int size = ratings.size();
-        if (size < 2)
-            return size;
-        vector<int> res(size,1);
-        for(int i = 1;i < size;i++){
-            if(ratings[i] > ratings[i-1]){
-                res[i] = res[i-1]+1;
+        if (size < 2) return size;
+        vector<int> res(size, 1);
+        for (int i = 1; i < size; ++i) {
+            if (ratings[i] > ratings[i - 1]) {
+                res[i] = res[i - 1] + 1;
             }
         }
-        for (int i = size-1;i>0;i--){
-            if(ratings[i] < ratings[i-1]){
-                res[i-1] = max(res[i-1],res[i]+1);
+        for (int i = size - 2; i >= 0; --i) {
+            if (ratings[i] > ratings[i + 1]) {
+                res[i] = max(res[i], res[i + 1] + 1);
             }
         }
-        return accumulate(res.begin(),res.end(),0);
+        return accumulate(res.begin(), res.end(), 0);
 
     }
 };
