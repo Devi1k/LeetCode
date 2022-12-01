@@ -11,28 +11,28 @@ using namespace std;
 class Solution {
 public:
     vector<int> partitionLabels(string s) {
-        int last[26];
-        int length = s.size();
-        for (int i = 0; i < length; i++) {
-            last[s[i] - 'a'] = i;
+        vector<int> character(26);
+        for (int i = 0; i < s.size(); ++i) {
+            character[s[i] - 'a'] = i;
         }
-        vector<int> partition;
-        int start = 0, end = 0;
-        for (int i = 0; i < length; i++) {
-            end = max(end, last[s[i] - 'a']);
-            if (i == end) {
-                partition.push_back(end - start + 1);
-                start = end + 1;
+        int left = 0, right = 0;
+        vector<int> res;
+        for (int i = 0; i < s.size(); ++i) {
+            right = max(character[s[i] - 'a'], right);
+            if (i == right) {
+                res.push_back(right - left + 1);
+                left = right + 1;
             }
         }
-        return partition;
+        return res;
     }
 };
+
 int main() {
     Solution solution;
-    string s = "ababcbacabdefegdehijhklij";
-    vector<int> res= solution.partitionLabels(s);
+    string s = "ababcbacadefegdehijhklij";
+    vector<int> res = solution.partitionLabels(s);
     for (int i = 0; i < res.size(); ++i) {
-        cout << res[i] ;
+        cout << res[i];
     }
 }
