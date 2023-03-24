@@ -34,6 +34,7 @@ int main() {
     string word1, word2;
     cin >> word1;
     cin >> word2;
+    cout << "minDistance";
     cout << solution.minDistance(word1, word2);
 }
 
